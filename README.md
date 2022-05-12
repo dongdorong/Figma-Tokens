@@ -27,37 +27,51 @@
 ### 1. Figma Plugin
 
 - Figma Tokens를 설치 합니다.
-    
-    ![스크린샷 2022-04-28 오후 10.15.45.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c2e386d4-7604-4313-80ea-ab3cf93789ba/스크린샷_2022-04-28_오후_10.15.45.png)
-    
-    ![스크린샷 2022-04-20 오후 11.36.29.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8167256f-ea56-4291-a06e-8ba611566544/스크린샷_2022-04-20_오후_11.36.29.png)
+  <img src="img/design-token-1.png">
+  <img src="img/design-token-2.png">
     
 
 ### 2. 각 속성별 Token을 만듭니다.
 
 - Global 속성의 Token을 만든다.
 - 각 Theme에 대한 Token은 새로운 Set을 만들어 진행한다.
+  <img src="img/design-token-3.png">
+  <img src="img/design-token-4.png">
 
-![스크린샷 2022-04-28 오후 2.40.23.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/19e32fa3-f85c-4788-bd05-28931d7ffb94/스크린샷_2022-04-28_오후_2.40.23.png)
+- Available Tokens
+|Group|Application|
+|------|---|
+|Sizing|width, height|
+|Spacing|Auto-Layout (Gap, padding)|
+|Color|Styles and Layers: Fill, border (right click)|
+|Border radius|All corners, individual|
+|Border width|Border width|
+|Box Shadow|Styles and Layers: (one or many, drop/inner)|
+|Opacity|Opacity|
+|Font family|Text layers (in combination with weight)|
+|Font weight|Text layers (in combination with family)|
+|Font size|Text layers|
+|Line height|Text layers|
+|Letter spacing|Text layers|
+|Paragraph spacing|Text layers|
+|TextCase|Text layers|
+|TextDecoration|Text layers|
+|Typography compositions|Text layers, styles|
 
-![스크린샷 2022-04-28 오후 2.49.50.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a180d7e-7883-420a-bbc8-f909b87bab8e/스크린샷_2022-04-28_오후_2.49.50.png)
-
-[Available Tokens](https://www.notion.so/662e123244874ecfa130361580ab8e9d)
 
 - 새로운 Theme의 Set을 만들면 사용하는 Token의 정확한 목적을 이름으로 정해야한다. [Adobe Spectrum link](https://spectrum.adobe.com/page/design-tokens/)
     - ex) button-cta-background-color
     - ex) button-cta-background-color-hover
     - ex) button-cta-background-color-focus
         
-        ![design_tokens@2x_1649708322885.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/19e21c3f-e5d9-4efa-865c-37a707237e46/design_tokens2x_1649708322885.png)
+    <img src="img/design-token-7.png">
         
     
 
 ### 3. Theme Set을 만듭니다.
 
 - Theme에 맞는 스타일을 Global에 있는 속성을 가져와서 만들 수 있습니다.
-
-![스크린샷 2022-04-28 오후 10.16.53.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c1a9fa43-bfb9-4935-8b65-e6c16ce07240/스크린샷_2022-04-28_오후_10.16.53.png)
+  <img src="img/design-token-5.png">
 
 ### 4. 만들어진 디자인 토큰으로 디자인 시스템을 작업합니다.
 
@@ -81,8 +95,7 @@
 ## 주의 사항
 
 - CSS 코드와 같아서 변수명이 다르면 디자인 토큰이 적용이 안되니 이름을 틀리지 않게 주의해야함
-
-![스크린샷 2022-04-28 오후 9.31.11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6db49151-cd9a-4b19-a748-f80491d8eaf1/스크린샷_2022-04-28_오후_9.31.11.png)
+<img src="img/design-token-6.png">
 
 ```json
 "typography": {
@@ -104,3 +117,14 @@
 	}
 }
 ```
+
+## 리서치와 PD <> FE 논의를 통해 알게된 점
+
+- 정교한 Design system을 원한다면 도입해볼 수 있다고 생각이 든다.
+- 초반 setting할때 방대한 Design token의 양으로 PD의 공수가 크게 든다. (한번 구축해놓으면 거의 변경 X)
+- Figma에서 Design token을 json으로 뽑을 수 있어도 FE가 사용하려면 코드 변환 프로그램을 사용해야함으로 공수가 든다.
+- Global적인 Token은 한번 등록해 놓으면 거의 건들지 않기 때문에 Design Token을 json으로 만들어서 관리하는 것이 의미가 없을 것 같다.
+- Theme을 바꾸거나, App, Web의 font family, color 등 스타일이 다를 경우에는 token으로 관리하기가 더 수월할 것 같다.
+- figma design library에는 spacing, border width, sizing 과 같은 디테일한 Token은 저장할 수 없기에 일관된 디자인 시스템을 만들기 위해서는 필요할 것 같다는 의견도 있었다.
+- PD <> FE 간에 Token name 정책이 잘 세워져 있어야한다.
+- PD는 Design system과 동시에 Design token도 관리해야해서 공수가 더 들 것 같다는 예상이다.
