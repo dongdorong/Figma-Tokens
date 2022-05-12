@@ -39,8 +39,9 @@
   <img src="img/design-token-4.png">
 
 - Available Tokens
+
 |Group|Application|
-|------|---|
+|------|------|
 |Sizing|width, height|
 |Spacing|Auto-Layout (Gap, padding)|
 |Color|Styles and Layers: Fill, border (right click)|
