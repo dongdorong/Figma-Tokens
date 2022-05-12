@@ -14,21 +14,15 @@
 
 ## Design Tokens Research 이유
 
----
-
 - 디자인 토큰 리서치의 목표는 효율적인 디자인 시스템 관리를 하기 위함
 - 일관된 디자인 토큰 - 시스템으로 작업 시간 & 운영 공수 줄이기
 
 ## Design Token 개요
 
----
-
 - 디자인 토큰은 디자인 시스템 작업 시 디자인 속성을 다양한 방법으로 저장하는 방법입니다.
 - 디자인 토큰은 디자인 시스템의 시각적 원자, 특히 시각적 디자인 속성을 저장하는 실체로 정의합니다. 확장 가능하고 일관된 시각적 시스템을 유지하기 위해 하드 코딩된 값 대신 이 값을 사용합니다.
 
 ## Design Token 적용 방법
-
----
 
 ### 1. Figma Plugin
 
@@ -69,13 +63,9 @@
 
 ## Figma File
 
----
-
 [https://www.figma.com/file/NYXodUamR9NbXyXQ5bSt1z/Design-Tokens?node-id=0%3A1](https://www.figma.com/file/NYXodUamR9NbXyXQ5bSt1z/Design-Tokens?node-id=0%3A1)
 
 ## PD <> FE 협업 포인트
-
----
 
 - 디자인 토큰은 개발까지 이어졌을 때 의미가 큼
 - 전달/적용 방법을 사전에 PD<>FE 사이에 정의를 잘 해야함
@@ -89,8 +79,6 @@
     
 
 ## 주의 사항
-
----
 
 - CSS 코드와 같아서 변수명이 다르면 디자인 토큰이 적용이 안되니 이름을 틀리지 않게 주의해야함
 
